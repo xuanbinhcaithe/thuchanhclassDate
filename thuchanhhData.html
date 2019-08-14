@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+    <script>
+      let myDate =function (day,month,year) {
+          this.day=day,
+          this.month=month,
+          this.year=year,
+          this.getDay=function () {
+              return day;
+          },
+          this.getMonth=function () {
+              return month;
+          },
+          this.getYear=function () {
+              return year;
+          },
+          this.setDay=function (day) {
+              this.day=day;
+          },
+          this.setMonth= function (month) {
+            this.month=  month;
+          },
+          this.setYear=function (year) {
+              this.year=year;
+          }
+      }
+      let now=new myDate(14,8,2019);
+      let day = now.getDay();
+      let month=now.getMonth();
+      let year=now.getYear();
+      alert("hôm nay là ngày "+day+" tháng "+month+" năm "+year);
+      now.setDay(15);
+      now.setMonth(8);
+      now.setYear(2019);
+      alert("ngày mai là ngày "+now.day+" tháng "+now.month+" năm "+now.year);
+
+    </script>
+
+</body>
+</html>
